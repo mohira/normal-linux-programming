@@ -7,3 +7,4 @@ RUN apt update && \
     apt install -y man && \
     yes | unminimize
 
+RUN apt install -y less vim strace
