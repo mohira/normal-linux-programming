@@ -8,3 +8,5 @@ RUN apt update && \
     yes | unminimize
 
 RUN apt install -y less vim strace
+
+RUN apt install -y python3

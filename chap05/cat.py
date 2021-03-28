@@ -15,7 +15,7 @@ def main():
 
 
 def do_cat(file_path: str) -> None:
-    buffer_size = 6
+    buffer_size = 64
 
     fd = os.open(file_path, os.O_RDONLY)
 

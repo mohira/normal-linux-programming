@@ -28,6 +28,8 @@ func doCat(path string) {
 	buf := make([]byte, BufferSize)
 
 	file, err := os.Open(path)
+	defer file.Close()
+
 	if err != nil {
 		log.Fatal(err)
 	}
