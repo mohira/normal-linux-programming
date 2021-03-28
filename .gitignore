@@ -2,7 +2,7 @@
 .DS_Store
 *.log
 .vagrant
-
+venv
 cmake-build-debug
 
 # Prerequisites
@@ -50,7 +50,6 @@ cmake-build-debug
 *.pdb
 
 # Kernel Module Compile Results
-*.mod*
 *.cmd
 .tmp_versions/
 modules.order
