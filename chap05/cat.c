@@ -1,11 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <sys/types.h>
-#include <sys/stat.h>
 #include <fcntl.h>
 
-static void do_cat(char *path);
+static void do_cat(const char *path);
 
 static void die(const char *s);
 
@@ -17,7 +15,7 @@ int main(int argc, char *argv[]) {
         exit(1);
     }
 
-    for (i = 0; i < argc; ++i) {
+    for (i = 1; i < argc; i++) {
         do_cat(argv[i]);
     }
     exit(0);
@@ -27,7 +25,7 @@ int main(int argc, char *argv[]) {
 
 #define BUFFER_SIZE 2048
 
-static void do_cat(char *path) {
+static void do_cat(const char *path) {
     int fd;
     unsigned char buf[BUFFER_SIZE];
     int n;
